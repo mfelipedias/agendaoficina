@@ -129,7 +129,7 @@
                                                     <input readonly type="text" class="form-control" id="a_motivo" name="a_motivo" value="<?php echo $a_motivo; ?>" disabled>
                                                 </div>
                                                 <label>Observações:</label>
-                                                <textarea readonly class="form-control mt-1" id="a_obs" name="a_obs" rows="4" value="<?php echo $a_obs; ?>" disabled></textarea>
+                                                <textarea readonly class="form-control mt-1" id="a_obs" name="a_obs" rows="4" placeholder="<?php echo $a_obs; ?>" disabled></textarea>
                                                 <span><?php echo "Agendamento feito por: ".$a_func; ?></span>
                                             </div>
                                             <div class="modal-footer">
@@ -243,7 +243,7 @@
                                                     <input readonly type="text" class="form-control" id="a_motivo" name="a_motivo" value="<?php echo $a_motivo; ?>" disabled>
                                                 </div>
                                                 <label>Observações:</label>
-                                                <textarea readonly class="form-control mt-1" id="a_obs" name="a_obs" rows="4" value="<?php echo $a_obs; ?>" disabled></textarea>
+                                                <textarea readonly class="form-control mt-1" id="a_obs" name="a_obs" rows="4" placeholder="<?php echo $a_obs; ?>" disabled></textarea>
                                                 <span><?php echo "Agendamento feito por: ".$a_func; ?></span>
                                             </div>
                                             <div class="modal-footer">
@@ -357,7 +357,7 @@
                                                     <input readonly type="text" class="form-control" id="a_motivo" name="a_motivo" value="<?php echo $a_motivo; ?>" disabled>
                                                 </div>
                                                 <label>Observações:</label>
-                                                <textarea readonly class="form-control mt-1" id="a_obs" name="a_obs" rows="4" value="<?php echo $a_obs; ?>" disabled></textarea>
+                                                <textarea readonly class="form-control mt-1" id="a_obs" name="a_obs" rows="4" placeholder="<?php echo $a_obs; ?>" disabled></textarea>
                                                 <span><?php echo "Agendamento feito por: ".$a_func; ?></span>
                                             </div>
                                             <div class="modal-footer">
@@ -471,7 +471,7 @@
                                                     <input readonly type="text" class="form-control" id="a_motivo" name="a_motivo" value="<?php echo $a_motivo; ?>" disabled>
                                                 </div>
                                                 <label>Observações:</label>
-                                                <textarea readonly class="form-control mt-1" id="a_obs" name="a_obs" rows="4" value="<?php echo $a_obs; ?>" disabled></textarea>
+                                                <textarea readonly class="form-control mt-1" id="a_obs" name="a_obs" rows="4" placeholder="<?php echo $a_obs; ?>" disabled></textarea>
                                                 <span><?php echo "Agendamento feito por: ".$a_func; ?></span>
                                             </div>
                                             <div class="modal-footer">
@@ -585,7 +585,7 @@
                                                     <input readonly type="text" class="form-control" id="a_motivo" name="a_motivo" value="<?php echo $a_motivo; ?>" disabled>
                                                 </div>
                                                 <label>Observações:</label>
-                                                <textarea readonly class="form-control mt-1" id="a_obs" name="a_obs" rows="4" value="<?php echo $a_obs; ?>" disabled></textarea>
+                                                <textarea readonly class="form-control mt-1" id="a_obs" name="a_obs" rows="4" placeholder="<?php echo $a_obs; ?>" disabled></textarea>
                                                 <span><?php echo "Agendamento feito por: ".$a_func; ?></span>
                                             </div>
                                             <div class="modal-footer">
@@ -699,7 +699,7 @@
                                                     <input readonly type="text" class="form-control" id="a_motivo" name="a_motivo" value="<?php echo $a_motivo; ?>" disabled>
                                                 </div>
                                                 <label>Observações:</label>
-                                                <textarea readonly class="form-control mt-1" id="a_obs" name="a_obs" rows="4" value="<?php echo $a_obs; ?>" disabled></textarea>
+                                                <textarea readonly class="form-control mt-1" id="a_obs" name="a_obs" rows="4" placeholder="<?php echo $a_obs; ?>" disabled></textarea>
                                                 <span><?php echo "Agendamento feito por: ".$a_func; ?></span>
                                             </div>
                                             <div class="modal-footer">
@@ -813,7 +813,7 @@
                                                     <input readonly type="text" class="form-control" id="a_motivo" name="a_motivo" value="<?php echo $a_motivo; ?>" disabled>
                                                 </div>
                                                 <label>Observações:</label>
-                                                <textarea readonly class="form-control mt-1" id="a_obs" name="a_obs" rows="4" value="<?php echo $a_obs; ?>" disabled></textarea>
+                                                <textarea readonly class="form-control mt-1" id="a_obs" name="a_obs" rows="4" placeholder="<?php echo $a_obs; ?>" disabled></textarea>
                                                 <span><?php echo "Agendamento feito por: ".$a_func; ?></span>
                                             </div>
                                             <div class="modal-footer">
@@ -927,7 +927,7 @@
                                                     <input readonly type="text" class="form-control" id="a_motivo" name="a_motivo" value="<?php echo $a_motivo; ?>" disabled>
                                                 </div>
                                                 <label>Observações:</label>
-                                                <textarea readonly class="form-control mt-1" id="a_obs" name="a_obs" rows="4" value="<?php echo $a_obs; ?>" disabled></textarea>
+                                                <textarea readonly class="form-control mt-1" id="a_obs" name="a_obs" rows="4" placeholder="<?php echo $a_obs; ?>" disabled></textarea>
                                                 <span><?php echo "Agendamento feito por: ".$a_func; ?></span>
                                             </div>
                                             <div class="modal-footer">
@@ -1155,7 +1155,7 @@
                                                     <input readonly type="text" class="form-control" id="a_motivo" name="a_motivo" value="<?php echo $a_motivo; ?>" disabled>
                                                 </div>
                                                 <label>Observações:</label>
-                                                <textarea readonly class="form-control mt-1" id="a_obs" name="a_obs" rows="4" value="<?php echo $a_obs; ?>" disabled></textarea>
+                                                <textarea readonly class="form-control mt-1" id="a_obs" name="a_obs" rows="4" placeholder="<?php echo $a_obs; ?>" disabled></textarea>
                                                 <span><?php echo "Agendamento feito por: ".$a_func; ?></span>
                                             </div>
                                             <div class="modal-footer">
