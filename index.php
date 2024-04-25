@@ -29,6 +29,18 @@
 </head>
 
 <body>
+    <?php
+    session_start();
+    if ((!isset($_SESSION['user']) == true) and (!isset($_SESSION['f_senha']) == true)) {
+        unset($_SESSION['f_id']);
+        unset($_SESSION['f_nome']);
+        unset($_SESSION['f_email']);
+        header('location: ./login.php');
+    }
+    $logado = $_SESSION['f_nome'];
+    $id_f = $_SESSION['f_id'];
+    $email_f = $_SESSION['f_email'];
+    ?>
     <?php $pagina = $_GET['pagina']; ?>
     <!-- Image and text -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light shadow">
