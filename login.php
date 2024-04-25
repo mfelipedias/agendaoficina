@@ -11,6 +11,12 @@
 </head>
 
 <body>
+  <?php if (isset($_COOKIE["email"])) {
+    $email = $_COOKIE["email"];
+   }  if (isset($_COOKIE["password"])) {
+    $email = $_COOKIE["password"];
+   } 
+   ?>
   <section class="h-100">
     <div class="container h-100">
       <div class="row justify-content-sm-center h-100">
@@ -21,16 +27,18 @@
           <div class="card shadow">
             <div class="card-body p-4">
               <form action="scripts/login_.php" method="post" class="needs-validation" novalidate="" autocomplete="off">
-                <div class="col" style="width: 300px;">
+                <div class="col" style="width: auto;">
                   <?php
-                  if ($retorno != "") {
-                    include './includes/return/erro.php';
+                  if (isset($_GET['retorno'])) {
+                    include './includes/erro.php';
                   }
                   ?>
                 </div>
                 <div class="mb-3">
                   <div class="form-floating">
-                    <input type="email" class="form-control" id="email" name="email" value="" placeholder="name@example.com" required autofocus>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com" value="<?php if (isset($_COOKIE["email"])) {
+                                                                                                                              echo $_COOKIE["email"];
+                                                                                                                            } ?>" required>
                     <label for="floatingInput">Email address</label>
                     <div class="invalid-feedback">
                       Email inválido
@@ -40,7 +48,9 @@
 
                 <div class="mb-3">
                   <div class="form-floating">
-                    <input type="password" class="form-control" id="password" name="password" placeholder="Password" required>
+                    <input type="password" class="form-control" id="password" name="password" placeholder="Password" value="<?php if (isset($_COOKIE["password"])) {
+                                                                                                                              echo $_COOKIE["password"];
+                                                                                                                            } ?>" required>
                     <label for="floatingPassword">Password</label>
                     <div class="invalid-feedback">
                       Preencha a senha
@@ -55,7 +65,7 @@
 
                 <div class="d-flex align-items-center">
                   <div class="form-check">
-                    <input type="checkbox" name="remember" id="remember" class="form-check-input">
+                    <input type="checkbox" name="remember" id="remember" class="form-check-input" <?php if (isset($_COOKIE["email"])) { ?> checked <?php } ?>>
                     <label for="remember" class="form-check-label">Lembrar</label>
                   </div>
                 </div>
@@ -73,7 +83,7 @@
             </div>
           </div>
           <div class="text-center mt-5 text-muted">
-            Copyright &copy; 2024 &mdash; Projeto esenvolvido por: <br> Catharina Britto, Dayane Silvestre, Heric Silvestre, Marcos Felipe A. D. Silva, Tammy Regina
+            Copyright &copy; 2024 &mdash; Projeto desenvolvido por: <br> Catharina Britto, Dayane Silvestre, Heric Silvestre, Marcos Felipe A. D. Silva, Tammy Regina
           </div>
         </div>
       </div>

@@ -5,11 +5,11 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
+    <title>Agenda Oficina</title>
+    <link rel="icon" type="image/x-icon" href="./img/logo-agenda-oficina.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link href=".css/navbar.css" rel="stylesheet" />
-    <link rel="stylesheet" type="text/css" href="estilos.css" />
+    <link rel="stylesheet" type="text/css" href="./css/estilos.css" />
     <script src="https://kit.fontawesome.com/0a713f6bd4.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <style type="text/css">
@@ -29,21 +29,48 @@
 </head>
 
 <body>
+
     <?php
     session_start();
     if ((!isset($_SESSION['user']) == true) and (!isset($_SESSION['f_senha']) == true)) {
         unset($_SESSION['f_id']);
         unset($_SESSION['f_nome']);
+        unset($_SESSION['f_cpf']);
         unset($_SESSION['f_email']);
+        unset($_SESSION['f_senha']);
         header('location: ./login.php');
     }
     $logado = $_SESSION['f_nome'];
     $id_f = $_SESSION['f_id'];
     $email_f = $_SESSION['f_email'];
+    $senha_f = $_SESSION['f_senha'];
+    $cpf_f = $_SESSION['f_cpf'];
+    $remember = $_SESSION['remember'];
+    if ($remember == "on") {
+        setcookie("email", $email_f, time() + (10 * 365 * 24 * 60 * 60));
+        setcookie("password", $senha_f, time() + (10 * 365 * 24 * 60 * 60));
+    } else {
+        setcookie("email", "", -1);
+        setcookie("password", "", -1);
+    }
+
     ?>
     <?php $pagina = $_GET['pagina']; ?>
+
+    <!-- início do preloader -->
+    <div id="preloader">
+        <div class="inner">
+            <!-- HTML DA ANIMAÇÃO MUITO LOUCA DO SEU PRELOADER! -->
+            <div class="bolas">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </div>
+    <!-- fim do preloader -->
     <!-- Image and text -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow" style="z-index: 999;">
         <a class="navbar-brand align-middle">
             <a class="material-symbols-outlined">
                 select_check_box
@@ -89,8 +116,8 @@
         </div>
 
         <div class="d-flex justify-content-end">
-            <span class="align-middle" style="">Bem Vindo!&nbsp;&nbsp;</span>
-            <a href="#"><span class="material-symbols-outlined">
+            <span class="align-middle">Bem Vindo,&nbsp;</span> <span style="color: #D42B07; font-weight: bold;"><?php echo $logado ?>!&nbsp;&nbsp;</span>
+            <a href="./scripts/logout_.php"><span class="material-symbols-outlined">
                     exit_to_app
                 </span></a>
         </div>
@@ -145,13 +172,23 @@
     } else {
         include './includes/func_agenda.php';
     } ?>
+
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="js/scripts.js"></script>
+    <script src="js/preloader.js"></script>
+    <script>
 
+    </script>
 </body>
-
+<footer>
+    <div class="text-center mt-5 text-muted">
+        Copyright &copy; Agenda Oficina 2024 &mdash; Projeto desenvolvido por: <br> Catharina Britto, Dayane Silvestre, Heric Silvestre, Marcos Felipe A. D. Silva, Tammy Regina
+    </div>
+</footer>
 
 </html>

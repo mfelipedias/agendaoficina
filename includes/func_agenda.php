@@ -1,15 +1,27 @@
-<div class="container">
+<?php $x = $_GET['x']; ?>
+
+<div class="container" id="calendario" name="calendario">
+
     <div class="timetable-img text-center">
         <img src="img/content/timetable.png" alt="">
     </div>
     <div class="d-flex justify-content-center m-3">
         <div class="btn-group" role="group" aria-label="Basic outlined example">
-            <a type="button" class="btn btn-outline-primary" href="?pagina=inicio&&x=<?php if ($_GET['x'] > 0) {
-                                                                                            echo $_GET['x'] - 7;
-                                                                                        } else {
-                                                                                            echo 0;
-                                                                                        } ?>">Voltar</a>
-            <a type="button" class="btn btn-outline-primary" href="?pagina=inicio&&x=<?php echo $_GET['x'] + 7; ?>">Avançar</a>
+            <a type="button" class="btn <?php if ($x == 0) {
+                                            echo 'btn-outline-secondary';
+                                        } else {
+                                            echo 'btn-outline-primary';
+                                        } ?>" href="?pagina=inicio&&x=<?php if ($x > 0) {
+                                                                            $y = $x;
+                                                                            $y = $y - 7;
+                                                                            echo $y;
+                                                                        } else {
+                                                                            echo 0;
+                                                                        } ?>">Voltar</a>
+            <a type="button" class="btn btn-outline-primary" href="?pagina=inicio&&x=<?php echo '0'; ?>">Inicio</a>
+            <a type="button" class="btn btn-outline-primary" href="?pagina=inicio&&x=<?php $y = $x;
+                                                                                        $y = $y + 7;
+                                                                                        echo $y; ?>">Avançar</a>
         </div>
     </div>
 
@@ -24,8 +36,6 @@
                     date_default_timezone_set('America/Sao_Paulo');
 
                     $hoje = date('Y-m-d');
-
-                    $x = $_GET['x'];
 
                     $i = 0 + $x;
                     $limite = 6 + $x;
