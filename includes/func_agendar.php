@@ -1,6 +1,9 @@
 <form class="container mt-3" action="./scripts/agenda_add.php" method="post">
     <div class="form-group">
-        <label for="exampleInputEmail1">Cliente</label>
+        <input type="hidden" class="form-control" id="a_func" name="a_func" value="<?php echo $logado?>">
+    </div>
+    <div class="form-group">
+        <label for="exampleInputEmail1">Cliente:</label>
         <small id="emailHelp" class="form-text text-muted m-1">Selecione o cliente na lista</small>
         <select class="custom-select my-1 mr-sm-2" id="a_cliente" name="a_cliente">
             <option selected>Selecione...</option>
@@ -13,14 +16,14 @@
                 $c_nome = $array['c_nome'];
                 $c_cpf = $array['c_cpf'];
             ?>
-                <option value="<?php echo $c_id;?>"><?php echo $c_nome;?> CPF: <?php echo $c_cpf;?></option>
+                <option value="<?php echo $c_id; ?>"><?php echo $c_nome; ?> CPF: <?php echo $c_cpf; ?></option>
             <?php } ?>
         </select>
         <a type="button" class="btn btn-primary" style="color:white" data-toggle="modal" data-target="#cadastroCliente">Cadastrar</a>
     </div>
 
     <div class="form-group">
-        <label for="exampleInputEmail1">Veículo</label>
+        <label for="exampleInputEmail1">Veículo:</label>
         <input type="text" class="form-control" id="a_veiculo" name="a_veiculo" placeholder="Marca e Modelo">
         <select class="custom-select my-1 mr-sm-2" id="a_motivo" name="a_motivo">
             <option selected>Selecione o serviço...</option>
@@ -78,6 +81,7 @@
                         <label for="exampleInputEmail1">Endereço</label>
                         <input type="text" class="form-control" id="c_endereco" name="c_endereco" placeholder="Endereço completo...">
                     </div>
+
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>

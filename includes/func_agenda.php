@@ -74,6 +74,7 @@
                                 $a_veiculo = $array['a_veiculo'];
                                 $a_motivo = $array['a_motivo'];
                                 $a_obs = $array['a_obs'];
+                                $a_func = $array['a_func'];
                                 $c_nome = $array['c_nome'];
                                 $c_cpf = $array['c_cpf'];
                                 $c_endereco = $array['c_endereco'];
@@ -100,34 +101,36 @@
                                             </div>
                                             <div class="modal-body">
                                                 <div class="form-group">
-                                                    <input readonly type="text" class="form-control" id="c_nome" name="c_nome" placeholder="<?php echo $c_nome; ?>" required>
+                                                    <input readonly type="text" class="form-control" id="c_nome" name="c_nome" value="<?php echo $c_nome; ?>" disabled>
                                                 </div>
                                                 <div class="form-group">
-                                                    <input readonly type="text" class="form-control" id="c_cpf" name="c_cpf" placeholder="<?php echo $c_cpf; ?>" required>
+                                                    <input readonly type="text" class="form-control" id="c_cpf" name="c_cpf" value="<?php echo $c_cpf; ?>" disabled>
                                                 </div>
                                                 <div class="form-group">
-                                                    <input readonly type="text" class="form-control" id="c_telefone" name="c_telefone" placeholder="<?php echo $c_telefone; ?>">
+                                                    <input readonly type="text" class="form-control" id="c_telefone" name="c_telefone" value="<?php echo $c_telefone; ?>" disabled>
                                                 </div>
                                                 <div class="form-group">
-                                                    <input readonly type="text" class="form-control" id="c_email" name="c_email" placeholder="<?php echo $c_email; ?>">
+                                                    <input readonly type="text" class="form-control" id="c_email" name="c_email" value="<?php echo $c_email; ?>" disabled>
                                                 </div>
                                                 <div class="form-group">
-                                                    <input readonly type="text" class="form-control" id="c_endereco" name="c_endereco" placeholder="<?php echo $c_endereco; ?>">
+                                                    <input readonly type="text" class="form-control" id="c_endereco" name="c_endereco" value="<?php echo $c_endereco; ?> "disabled>
                                                 </div>
                                                 <div class="form-group">
-                                                    <input readonly type="text" class="form-control" id="a_data" name="a_data" placeholder="<?php $dataModal = DateTime::createFromFormat('Y-m-d', $a_data);
-                                                                                                                                            echo $dataModal->format('d/m/Y'); ?>">
+                                                    <input readonly type="text" class="form-control" id="a_data" name="a_data" value="<?php $dataModal = DateTime::createFromFormat('Y-m-d', $a_data);
+                                                                                                                                            echo $dataModal->format('d/m/Y'); ?>" disabled>
                                                 </div>
                                                 <div class="form-group">
-                                                    <input readonly type="text" class="form-control" id="a_hora" name="a_hora" placeholder="<?php echo $a_hora . ":00 horas"; ?>">
+                                                    <input readonly type="text" class="form-control" id="a_hora" name="a_hora" value="<?php echo $a_hora . ":00 horas"; ?>" disabled>
                                                 </div>
                                                 <div class="form-group">
-                                                    <input readonly type="text" class="form-control" id="a_veiculo" name="a_veiculo" placeholder="<?php echo $a_veiculo; ?>">
+                                                    <input readonly type="text" class="form-control" id="a_veiculo" name="a_veiculo" value="<?php echo $a_veiculo; ?>"disabled>
                                                 </div>
                                                 <div class="form-group">
-                                                    <input readonly type="text" class="form-control" id="a_motivo" name="a_motivo" placeholder="<?php echo $a_motivo; ?>">
+                                                    <input readonly type="text" class="form-control" id="a_motivo" name="a_motivo" value="<?php echo $a_motivo; ?>" disabled>
                                                 </div>
-                                                <textarea readonly class="form-control mt-1" id="a_obs" name="a_obs" rows="4" placeholder="<?php echo $a_obs; ?>"></textarea>
+                                                <label>Observações:</label>
+                                                <textarea readonly class="form-control mt-1" id="a_obs" name="a_obs" rows="4" value="<?php echo $a_obs; ?>" disabled></textarea>
+                                                <span><?php echo "Agendamento feito por: ".$a_func; ?></span>
                                             </div>
                                             <div class="modal-footer">
                                                 <a type="button" class="btn btn-danger" data-toggle="modal" data-target="#modalExcluir<?php echo $a_id; ?>">Excluir</a>
@@ -185,6 +188,7 @@
                                 $a_veiculo = $array['a_veiculo'];
                                 $a_motivo = $array['a_motivo'];
                                 $a_obs = $array['a_obs'];
+                                $a_func = $array['a_func'];
                                 $c_nome = $array['c_nome'];
                                 $c_cpf = $array['c_cpf'];
                                 $c_endereco = $array['c_endereco'];
@@ -211,34 +215,36 @@
                                             </div>
                                             <div class="modal-body">
                                                 <div class="form-group">
-                                                    <input readonly type="text" class="form-control" id="c_nome" name="c_nome" placeholder="<?php echo $c_nome; ?>" required>
+                                                    <input readonly type="text" class="form-control" id="c_nome" name="c_nome" value="<?php echo $c_nome; ?>" disabled>
                                                 </div>
                                                 <div class="form-group">
-                                                    <input readonly type="text" class="form-control" id="c_cpf" name="c_cpf" placeholder="<?php echo $c_cpf; ?>" required>
+                                                    <input readonly type="text" class="form-control" id="c_cpf" name="c_cpf" value="<?php echo $c_cpf; ?>" disabled>
                                                 </div>
                                                 <div class="form-group">
-                                                    <input readonly type="text" class="form-control" id="c_telefone" name="c_telefone" placeholder="<?php echo $c_telefone; ?>">
+                                                    <input readonly type="text" class="form-control" id="c_telefone" name="c_telefone" value="<?php echo $c_telefone; ?>" disabled>
                                                 </div>
                                                 <div class="form-group">
-                                                    <input readonly type="text" class="form-control" id="c_email" name="c_email" placeholder="<?php echo $c_email; ?>">
+                                                    <input readonly type="text" class="form-control" id="c_email" name="c_email" value="<?php echo $c_email; ?>" disabled>
                                                 </div>
                                                 <div class="form-group">
-                                                    <input readonly type="text" class="form-control" id="c_endereco" name="c_endereco" placeholder="<?php echo $c_endereco; ?>">
+                                                    <input readonly type="text" class="form-control" id="c_endereco" name="c_endereco" value="<?php echo $c_endereco; ?> "disabled>
                                                 </div>
                                                 <div class="form-group">
-                                                    <input readonly type="text" class="form-control" id="a_data" name="a_data" placeholder="<?php $dataModal = DateTime::createFromFormat('Y-m-d', $a_data);
-                                                                                                                                            echo $dataModal->format('d/m/Y'); ?>">
+                                                    <input readonly type="text" class="form-control" id="a_data" name="a_data" value="<?php $dataModal = DateTime::createFromFormat('Y-m-d', $a_data);
+                                                                                                                                            echo $dataModal->format('d/m/Y'); ?>" disabled>
                                                 </div>
                                                 <div class="form-group">
-                                                    <input readonly type="text" class="form-control" id="a_hora" name="a_hora" placeholder="<?php echo $a_hora . ":00 horas"; ?>">
+                                                    <input readonly type="text" class="form-control" id="a_hora" name="a_hora" value="<?php echo $a_hora . ":00 horas"; ?>" disabled>
                                                 </div>
                                                 <div class="form-group">
-                                                    <input readonly type="text" class="form-control" id="a_veiculo" name="a_veiculo" placeholder="<?php echo $a_veiculo; ?>">
+                                                    <input readonly type="text" class="form-control" id="a_veiculo" name="a_veiculo" value="<?php echo $a_veiculo; ?>"disabled>
                                                 </div>
                                                 <div class="form-group">
-                                                    <input readonly type="text" class="form-control" id="a_motivo" name="a_motivo" placeholder="<?php echo $a_motivo; ?>">
+                                                    <input readonly type="text" class="form-control" id="a_motivo" name="a_motivo" value="<?php echo $a_motivo; ?>" disabled>
                                                 </div>
-                                                <textarea readonly class="form-control mt-1" id="a_obs" name="a_obs" rows="4" placeholder="<?php echo $a_obs; ?>"></textarea>
+                                                <label>Observações:</label>
+                                                <textarea readonly class="form-control mt-1" id="a_obs" name="a_obs" rows="4" value="<?php echo $a_obs; ?>" disabled></textarea>
+                                                <span><?php echo "Agendamento feito por: ".$a_func; ?></span>
                                             </div>
                                             <div class="modal-footer">
                                                 <a type="button" class="btn btn-danger" data-toggle="modal" data-target="#modalExcluir<?php echo $a_id; ?>">Excluir</a>
@@ -296,6 +302,7 @@
                                 $a_veiculo = $array['a_veiculo'];
                                 $a_motivo = $array['a_motivo'];
                                 $a_obs = $array['a_obs'];
+                                $a_func = $array['a_func'];
                                 $c_nome = $array['c_nome'];
                                 $c_cpf = $array['c_cpf'];
                                 $c_endereco = $array['c_endereco'];
@@ -322,34 +329,36 @@
                                             </div>
                                             <div class="modal-body">
                                                 <div class="form-group">
-                                                    <input readonly type="text" class="form-control" id="c_nome" name="c_nome" placeholder="<?php echo $c_nome; ?>" required>
+                                                    <input readonly type="text" class="form-control" id="c_nome" name="c_nome" value="<?php echo $c_nome; ?>" disabled>
                                                 </div>
                                                 <div class="form-group">
-                                                    <input readonly type="text" class="form-control" id="c_cpf" name="c_cpf" placeholder="<?php echo $c_cpf; ?>" required>
+                                                    <input readonly type="text" class="form-control" id="c_cpf" name="c_cpf" value="<?php echo $c_cpf; ?>" disabled>
                                                 </div>
                                                 <div class="form-group">
-                                                    <input readonly type="text" class="form-control" id="c_telefone" name="c_telefone" placeholder="<?php echo $c_telefone; ?>">
+                                                    <input readonly type="text" class="form-control" id="c_telefone" name="c_telefone" value="<?php echo $c_telefone; ?>" disabled>
                                                 </div>
                                                 <div class="form-group">
-                                                    <input readonly type="text" class="form-control" id="c_email" name="c_email" placeholder="<?php echo $c_email; ?>">
+                                                    <input readonly type="text" class="form-control" id="c_email" name="c_email" value="<?php echo $c_email; ?>" disabled>
                                                 </div>
                                                 <div class="form-group">
-                                                    <input readonly type="text" class="form-control" id="c_endereco" name="c_endereco" placeholder="<?php echo $c_endereco; ?>">
+                                                    <input readonly type="text" class="form-control" id="c_endereco" name="c_endereco" value="<?php echo $c_endereco; ?> "disabled>
                                                 </div>
                                                 <div class="form-group">
-                                                    <input readonly type="text" class="form-control" id="a_data" name="a_data" placeholder="<?php $dataModal = DateTime::createFromFormat('Y-m-d', $a_data);
-                                                                                                                                            echo $dataModal->format('d/m/Y'); ?>">
+                                                    <input readonly type="text" class="form-control" id="a_data" name="a_data" value="<?php $dataModal = DateTime::createFromFormat('Y-m-d', $a_data);
+                                                                                                                                            echo $dataModal->format('d/m/Y'); ?>" disabled>
                                                 </div>
                                                 <div class="form-group">
-                                                    <input readonly type="text" class="form-control" id="a_hora" name="a_hora" placeholder="<?php echo $a_hora . ":00 horas"; ?>">
+                                                    <input readonly type="text" class="form-control" id="a_hora" name="a_hora" value="<?php echo $a_hora . ":00 horas"; ?>" disabled>
                                                 </div>
                                                 <div class="form-group">
-                                                    <input readonly type="text" class="form-control" id="a_veiculo" name="a_veiculo" placeholder="<?php echo $a_veiculo; ?>">
+                                                    <input readonly type="text" class="form-control" id="a_veiculo" name="a_veiculo" value="<?php echo $a_veiculo; ?>"disabled>
                                                 </div>
                                                 <div class="form-group">
-                                                    <input readonly type="text" class="form-control" id="a_motivo" name="a_motivo" placeholder="<?php echo $a_motivo; ?>">
+                                                    <input readonly type="text" class="form-control" id="a_motivo" name="a_motivo" value="<?php echo $a_motivo; ?>" disabled>
                                                 </div>
-                                                <textarea readonly class="form-control mt-1" id="a_obs" name="a_obs" rows="4" placeholder="<?php echo $a_obs; ?>"></textarea>
+                                                <label>Observações:</label>
+                                                <textarea readonly class="form-control mt-1" id="a_obs" name="a_obs" rows="4" value="<?php echo $a_obs; ?>" disabled></textarea>
+                                                <span><?php echo "Agendamento feito por: ".$a_func; ?></span>
                                             </div>
                                             <div class="modal-footer">
                                                 <a type="button" class="btn btn-danger" data-toggle="modal" data-target="#modalExcluir<?php echo $a_id; ?>">Excluir</a>
@@ -407,6 +416,7 @@
                                 $a_veiculo = $array['a_veiculo'];
                                 $a_motivo = $array['a_motivo'];
                                 $a_obs = $array['a_obs'];
+                                $a_func = $array['a_func'];
                                 $c_nome = $array['c_nome'];
                                 $c_cpf = $array['c_cpf'];
                                 $c_endereco = $array['c_endereco'];
@@ -433,34 +443,36 @@
                                             </div>
                                             <div class="modal-body">
                                                 <div class="form-group">
-                                                    <input readonly type="text" class="form-control" id="c_nome" name="c_nome" placeholder="<?php echo $c_nome; ?>" required>
+                                                    <input readonly type="text" class="form-control" id="c_nome" name="c_nome" value="<?php echo $c_nome; ?>" disabled>
                                                 </div>
                                                 <div class="form-group">
-                                                    <input readonly type="text" class="form-control" id="c_cpf" name="c_cpf" placeholder="<?php echo $c_cpf; ?>" required>
+                                                    <input readonly type="text" class="form-control" id="c_cpf" name="c_cpf" value="<?php echo $c_cpf; ?>" disabled>
                                                 </div>
                                                 <div class="form-group">
-                                                    <input readonly type="text" class="form-control" id="c_telefone" name="c_telefone" placeholder="<?php echo $c_telefone; ?>">
+                                                    <input readonly type="text" class="form-control" id="c_telefone" name="c_telefone" value="<?php echo $c_telefone; ?>" disabled>
                                                 </div>
                                                 <div class="form-group">
-                                                    <input readonly type="text" class="form-control" id="c_email" name="c_email" placeholder="<?php echo $c_email; ?>">
+                                                    <input readonly type="text" class="form-control" id="c_email" name="c_email" value="<?php echo $c_email; ?>" disabled>
                                                 </div>
                                                 <div class="form-group">
-                                                    <input readonly type="text" class="form-control" id="c_endereco" name="c_endereco" placeholder="<?php echo $c_endereco; ?>">
+                                                    <input readonly type="text" class="form-control" id="c_endereco" name="c_endereco" value="<?php echo $c_endereco; ?> "disabled>
                                                 </div>
                                                 <div class="form-group">
-                                                    <input readonly type="text" class="form-control" id="a_data" name="a_data" placeholder="<?php $dataModal = DateTime::createFromFormat('Y-m-d', $a_data);
-                                                                                                                                            echo $dataModal->format('d/m/Y'); ?>">
+                                                    <input readonly type="text" class="form-control" id="a_data" name="a_data" value="<?php $dataModal = DateTime::createFromFormat('Y-m-d', $a_data);
+                                                                                                                                            echo $dataModal->format('d/m/Y'); ?>" disabled>
                                                 </div>
                                                 <div class="form-group">
-                                                    <input readonly type="text" class="form-control" id="a_hora" name="a_hora" placeholder="<?php echo $a_hora . ":00 horas"; ?>">
+                                                    <input readonly type="text" class="form-control" id="a_hora" name="a_hora" value="<?php echo $a_hora . ":00 horas"; ?>" disabled>
                                                 </div>
                                                 <div class="form-group">
-                                                    <input readonly type="text" class="form-control" id="a_veiculo" name="a_veiculo" placeholder="<?php echo $a_veiculo; ?>">
+                                                    <input readonly type="text" class="form-control" id="a_veiculo" name="a_veiculo" value="<?php echo $a_veiculo; ?>"disabled>
                                                 </div>
                                                 <div class="form-group">
-                                                    <input readonly type="text" class="form-control" id="a_motivo" name="a_motivo" placeholder="<?php echo $a_motivo; ?>">
+                                                    <input readonly type="text" class="form-control" id="a_motivo" name="a_motivo" value="<?php echo $a_motivo; ?>" disabled>
                                                 </div>
-                                                <textarea readonly class="form-control mt-1" id="a_obs" name="a_obs" rows="4" placeholder="<?php echo $a_obs; ?>"></textarea>
+                                                <label>Observações:</label>
+                                                <textarea readonly class="form-control mt-1" id="a_obs" name="a_obs" rows="4" value="<?php echo $a_obs; ?>" disabled></textarea>
+                                                <span><?php echo "Agendamento feito por: ".$a_func; ?></span>
                                             </div>
                                             <div class="modal-footer">
                                                 <a type="button" class="btn btn-danger" data-toggle="modal" data-target="#modalExcluir<?php echo $a_id; ?>">Excluir</a>
@@ -518,6 +530,7 @@
                                 $a_veiculo = $array['a_veiculo'];
                                 $a_motivo = $array['a_motivo'];
                                 $a_obs = $array['a_obs'];
+                                $a_func = $array['a_func'];
                                 $c_nome = $array['c_nome'];
                                 $c_cpf = $array['c_cpf'];
                                 $c_endereco = $array['c_endereco'];
@@ -544,34 +557,36 @@
                                             </div>
                                             <div class="modal-body">
                                                 <div class="form-group">
-                                                    <input readonly type="text" class="form-control" id="c_nome" name="c_nome" placeholder="<?php echo $c_nome; ?>" required>
+                                                    <input readonly type="text" class="form-control" id="c_nome" name="c_nome" value="<?php echo $c_nome; ?>" disabled>
                                                 </div>
                                                 <div class="form-group">
-                                                    <input readonly type="text" class="form-control" id="c_cpf" name="c_cpf" placeholder="<?php echo $c_cpf; ?>" required>
+                                                    <input readonly type="text" class="form-control" id="c_cpf" name="c_cpf" value="<?php echo $c_cpf; ?>" disabled>
                                                 </div>
                                                 <div class="form-group">
-                                                    <input readonly type="text" class="form-control" id="c_telefone" name="c_telefone" placeholder="<?php echo $c_telefone; ?>">
+                                                    <input readonly type="text" class="form-control" id="c_telefone" name="c_telefone" value="<?php echo $c_telefone; ?>" disabled>
                                                 </div>
                                                 <div class="form-group">
-                                                    <input readonly type="text" class="form-control" id="c_email" name="c_email" placeholder="<?php echo $c_email; ?>">
+                                                    <input readonly type="text" class="form-control" id="c_email" name="c_email" value="<?php echo $c_email; ?>" disabled>
                                                 </div>
                                                 <div class="form-group">
-                                                    <input readonly type="text" class="form-control" id="c_endereco" name="c_endereco" placeholder="<?php echo $c_endereco; ?>">
+                                                    <input readonly type="text" class="form-control" id="c_endereco" name="c_endereco" value="<?php echo $c_endereco; ?> "disabled>
                                                 </div>
                                                 <div class="form-group">
-                                                    <input readonly type="text" class="form-control" id="a_data" name="a_data" placeholder="<?php $dataModal = DateTime::createFromFormat('Y-m-d', $a_data);
-                                                                                                                                            echo $dataModal->format('d/m/Y'); ?>">
+                                                    <input readonly type="text" class="form-control" id="a_data" name="a_data" value="<?php $dataModal = DateTime::createFromFormat('Y-m-d', $a_data);
+                                                                                                                                            echo $dataModal->format('d/m/Y'); ?>" disabled>
                                                 </div>
                                                 <div class="form-group">
-                                                    <input readonly type="text" class="form-control" id="a_hora" name="a_hora" placeholder="<?php echo $a_hora . ":00 horas"; ?>">
+                                                    <input readonly type="text" class="form-control" id="a_hora" name="a_hora" value="<?php echo $a_hora . ":00 horas"; ?>" disabled>
                                                 </div>
                                                 <div class="form-group">
-                                                    <input readonly type="text" class="form-control" id="a_veiculo" name="a_veiculo" placeholder="<?php echo $a_veiculo; ?>">
+                                                    <input readonly type="text" class="form-control" id="a_veiculo" name="a_veiculo" value="<?php echo $a_veiculo; ?>"disabled>
                                                 </div>
                                                 <div class="form-group">
-                                                    <input readonly type="text" class="form-control" id="a_motivo" name="a_motivo" placeholder="<?php echo $a_motivo; ?>">
+                                                    <input readonly type="text" class="form-control" id="a_motivo" name="a_motivo" value="<?php echo $a_motivo; ?>" disabled>
                                                 </div>
-                                                <textarea readonly class="form-control mt-1" id="a_obs" name="a_obs" rows="4" placeholder="<?php echo $a_obs; ?>"></textarea>
+                                                <label>Observações:</label>
+                                                <textarea readonly class="form-control mt-1" id="a_obs" name="a_obs" rows="4" value="<?php echo $a_obs; ?>" disabled></textarea>
+                                                <span><?php echo "Agendamento feito por: ".$a_func; ?></span>
                                             </div>
                                             <div class="modal-footer">
                                                 <a type="button" class="btn btn-danger" data-toggle="modal" data-target="#modalExcluir<?php echo $a_id; ?>">Excluir</a>
@@ -629,6 +644,7 @@
                                 $a_veiculo = $array['a_veiculo'];
                                 $a_motivo = $array['a_motivo'];
                                 $a_obs = $array['a_obs'];
+                                $a_func = $array['a_func'];
                                 $c_nome = $array['c_nome'];
                                 $c_cpf = $array['c_cpf'];
                                 $c_endereco = $array['c_endereco'];
@@ -655,34 +671,36 @@
                                             </div>
                                             <div class="modal-body">
                                                 <div class="form-group">
-                                                    <input readonly type="text" class="form-control" id="c_nome" name="c_nome" placeholder="<?php echo $c_nome; ?>" required>
+                                                    <input readonly type="text" class="form-control" id="c_nome" name="c_nome" value="<?php echo $c_nome; ?>" disabled>
                                                 </div>
                                                 <div class="form-group">
-                                                    <input readonly type="text" class="form-control" id="c_cpf" name="c_cpf" placeholder="<?php echo $c_cpf; ?>" required>
+                                                    <input readonly type="text" class="form-control" id="c_cpf" name="c_cpf" value="<?php echo $c_cpf; ?>" disabled>
                                                 </div>
                                                 <div class="form-group">
-                                                    <input readonly type="text" class="form-control" id="c_telefone" name="c_telefone" placeholder="<?php echo $c_telefone; ?>">
+                                                    <input readonly type="text" class="form-control" id="c_telefone" name="c_telefone" value="<?php echo $c_telefone; ?>" disabled>
                                                 </div>
                                                 <div class="form-group">
-                                                    <input readonly type="text" class="form-control" id="c_email" name="c_email" placeholder="<?php echo $c_email; ?>">
+                                                    <input readonly type="text" class="form-control" id="c_email" name="c_email" value="<?php echo $c_email; ?>" disabled>
                                                 </div>
                                                 <div class="form-group">
-                                                    <input readonly type="text" class="form-control" id="c_endereco" name="c_endereco" placeholder="<?php echo $c_endereco; ?>">
+                                                    <input readonly type="text" class="form-control" id="c_endereco" name="c_endereco" value="<?php echo $c_endereco; ?> "disabled>
                                                 </div>
                                                 <div class="form-group">
-                                                    <input readonly type="text" class="form-control" id="a_data" name="a_data" placeholder="<?php $dataModal = DateTime::createFromFormat('Y-m-d', $a_data);
-                                                                                                                                            echo $dataModal->format('d/m/Y'); ?>">
+                                                    <input readonly type="text" class="form-control" id="a_data" name="a_data" value="<?php $dataModal = DateTime::createFromFormat('Y-m-d', $a_data);
+                                                                                                                                            echo $dataModal->format('d/m/Y'); ?>" disabled>
                                                 </div>
                                                 <div class="form-group">
-                                                    <input readonly type="text" class="form-control" id="a_hora" name="a_hora" placeholder="<?php echo $a_hora . ":00 horas"; ?>">
+                                                    <input readonly type="text" class="form-control" id="a_hora" name="a_hora" value="<?php echo $a_hora . ":00 horas"; ?>" disabled>
                                                 </div>
                                                 <div class="form-group">
-                                                    <input readonly type="text" class="form-control" id="a_veiculo" name="a_veiculo" placeholder="<?php echo $a_veiculo; ?>">
+                                                    <input readonly type="text" class="form-control" id="a_veiculo" name="a_veiculo" value="<?php echo $a_veiculo; ?>"disabled>
                                                 </div>
                                                 <div class="form-group">
-                                                    <input readonly type="text" class="form-control" id="a_motivo" name="a_motivo" placeholder="<?php echo $a_motivo; ?>">
+                                                    <input readonly type="text" class="form-control" id="a_motivo" name="a_motivo" value="<?php echo $a_motivo; ?>" disabled>
                                                 </div>
-                                                <textarea readonly class="form-control mt-1" id="a_obs" name="a_obs" rows="4" placeholder="<?php echo $a_obs; ?>"></textarea>
+                                                <label>Observações:</label>
+                                                <textarea readonly class="form-control mt-1" id="a_obs" name="a_obs" rows="4" value="<?php echo $a_obs; ?>" disabled></textarea>
+                                                <span><?php echo "Agendamento feito por: ".$a_func; ?></span>
                                             </div>
                                             <div class="modal-footer">
                                                 <a type="button" class="btn btn-danger" data-toggle="modal" data-target="#modalExcluir<?php echo $a_id; ?>">Excluir</a>
@@ -740,6 +758,7 @@
                                 $a_veiculo = $array['a_veiculo'];
                                 $a_motivo = $array['a_motivo'];
                                 $a_obs = $array['a_obs'];
+                                $a_func = $array['a_func'];
                                 $c_nome = $array['c_nome'];
                                 $c_cpf = $array['c_cpf'];
                                 $c_endereco = $array['c_endereco'];
@@ -766,34 +785,36 @@
                                             </div>
                                             <div class="modal-body">
                                                 <div class="form-group">
-                                                    <input readonly type="text" class="form-control" id="c_nome" name="c_nome" placeholder="<?php echo $c_nome; ?>" required>
+                                                    <input readonly type="text" class="form-control" id="c_nome" name="c_nome" value="<?php echo $c_nome; ?>" disabled>
                                                 </div>
                                                 <div class="form-group">
-                                                    <input readonly type="text" class="form-control" id="c_cpf" name="c_cpf" placeholder="<?php echo $c_cpf; ?>" required>
+                                                    <input readonly type="text" class="form-control" id="c_cpf" name="c_cpf" value="<?php echo $c_cpf; ?>" disabled>
                                                 </div>
                                                 <div class="form-group">
-                                                    <input readonly type="text" class="form-control" id="c_telefone" name="c_telefone" placeholder="<?php echo $c_telefone; ?>">
+                                                    <input readonly type="text" class="form-control" id="c_telefone" name="c_telefone" value="<?php echo $c_telefone; ?>" disabled>
                                                 </div>
                                                 <div class="form-group">
-                                                    <input readonly type="text" class="form-control" id="c_email" name="c_email" placeholder="<?php echo $c_email; ?>">
+                                                    <input readonly type="text" class="form-control" id="c_email" name="c_email" value="<?php echo $c_email; ?>" disabled>
                                                 </div>
                                                 <div class="form-group">
-                                                    <input readonly type="text" class="form-control" id="c_endereco" name="c_endereco" placeholder="<?php echo $c_endereco; ?>">
+                                                    <input readonly type="text" class="form-control" id="c_endereco" name="c_endereco" value="<?php echo $c_endereco; ?> "disabled>
                                                 </div>
                                                 <div class="form-group">
-                                                    <input readonly type="text" class="form-control" id="a_data" name="a_data" placeholder="<?php $dataModal = DateTime::createFromFormat('Y-m-d', $a_data);
-                                                                                                                                            echo $dataModal->format('d/m/Y'); ?>">
+                                                    <input readonly type="text" class="form-control" id="a_data" name="a_data" value="<?php $dataModal = DateTime::createFromFormat('Y-m-d', $a_data);
+                                                                                                                                            echo $dataModal->format('d/m/Y'); ?>" disabled>
                                                 </div>
                                                 <div class="form-group">
-                                                    <input readonly type="text" class="form-control" id="a_hora" name="a_hora" placeholder="<?php echo $a_hora . ":00 horas"; ?>">
+                                                    <input readonly type="text" class="form-control" id="a_hora" name="a_hora" value="<?php echo $a_hora . ":00 horas"; ?>" disabled>
                                                 </div>
                                                 <div class="form-group">
-                                                    <input readonly type="text" class="form-control" id="a_veiculo" name="a_veiculo" placeholder="<?php echo $a_veiculo; ?>">
+                                                    <input readonly type="text" class="form-control" id="a_veiculo" name="a_veiculo" value="<?php echo $a_veiculo; ?>"disabled>
                                                 </div>
                                                 <div class="form-group">
-                                                    <input readonly type="text" class="form-control" id="a_motivo" name="a_motivo" placeholder="<?php echo $a_motivo; ?>">
+                                                    <input readonly type="text" class="form-control" id="a_motivo" name="a_motivo" value="<?php echo $a_motivo; ?>" disabled>
                                                 </div>
-                                                <textarea readonly class="form-control mt-1" id="a_obs" name="a_obs" rows="4" placeholder="<?php echo $a_obs; ?>"></textarea>
+                                                <label>Observações:</label>
+                                                <textarea readonly class="form-control mt-1" id="a_obs" name="a_obs" rows="4" value="<?php echo $a_obs; ?>" disabled></textarea>
+                                                <span><?php echo "Agendamento feito por: ".$a_func; ?></span>
                                             </div>
                                             <div class="modal-footer">
                                                 <a type="button" class="btn btn-danger" data-toggle="modal" data-target="#modalExcluir<?php echo $a_id; ?>">Excluir</a>
@@ -851,6 +872,7 @@
                                 $a_veiculo = $array['a_veiculo'];
                                 $a_motivo = $array['a_motivo'];
                                 $a_obs = $array['a_obs'];
+                                $a_func = $array['a_func'];
                                 $c_nome = $array['c_nome'];
                                 $c_cpf = $array['c_cpf'];
                                 $c_endereco = $array['c_endereco'];
@@ -877,34 +899,36 @@
                                             </div>
                                             <div class="modal-body">
                                                 <div class="form-group">
-                                                    <input readonly type="text" class="form-control" id="c_nome" name="c_nome" placeholder="<?php echo $c_nome; ?>" required>
+                                                    <input readonly type="text" class="form-control" id="c_nome" name="c_nome" value="<?php echo $c_nome; ?>" disabled>
                                                 </div>
                                                 <div class="form-group">
-                                                    <input readonly type="text" class="form-control" id="c_cpf" name="c_cpf" placeholder="<?php echo $c_cpf; ?>" required>
+                                                    <input readonly type="text" class="form-control" id="c_cpf" name="c_cpf" value="<?php echo $c_cpf; ?>" disabled>
                                                 </div>
                                                 <div class="form-group">
-                                                    <input readonly type="text" class="form-control" id="c_telefone" name="c_telefone" placeholder="<?php echo $c_telefone; ?>">
+                                                    <input readonly type="text" class="form-control" id="c_telefone" name="c_telefone" value="<?php echo $c_telefone; ?>" disabled>
                                                 </div>
                                                 <div class="form-group">
-                                                    <input readonly type="text" class="form-control" id="c_email" name="c_email" placeholder="<?php echo $c_email; ?>">
+                                                    <input readonly type="text" class="form-control" id="c_email" name="c_email" value="<?php echo $c_email; ?>" disabled>
                                                 </div>
                                                 <div class="form-group">
-                                                    <input readonly type="text" class="form-control" id="c_endereco" name="c_endereco" placeholder="<?php echo $c_endereco; ?>">
+                                                    <input readonly type="text" class="form-control" id="c_endereco" name="c_endereco" value="<?php echo $c_endereco; ?> "disabled>
                                                 </div>
                                                 <div class="form-group">
-                                                    <input readonly type="text" class="form-control" id="a_data" name="a_data" placeholder="<?php $dataModal = DateTime::createFromFormat('Y-m-d', $a_data);
-                                                                                                                                            echo $dataModal->format('d/m/Y'); ?>">
+                                                    <input readonly type="text" class="form-control" id="a_data" name="a_data" value="<?php $dataModal = DateTime::createFromFormat('Y-m-d', $a_data);
+                                                                                                                                            echo $dataModal->format('d/m/Y'); ?>" disabled>
                                                 </div>
                                                 <div class="form-group">
-                                                    <input readonly type="text" class="form-control" id="a_hora" name="a_hora" placeholder="<?php echo $a_hora . ":00 horas"; ?>">
+                                                    <input readonly type="text" class="form-control" id="a_hora" name="a_hora" value="<?php echo $a_hora . ":00 horas"; ?>" disabled>
                                                 </div>
                                                 <div class="form-group">
-                                                    <input readonly type="text" class="form-control" id="a_veiculo" name="a_veiculo" placeholder="<?php echo $a_veiculo; ?>">
+                                                    <input readonly type="text" class="form-control" id="a_veiculo" name="a_veiculo" value="<?php echo $a_veiculo; ?>"disabled>
                                                 </div>
                                                 <div class="form-group">
-                                                    <input readonly type="text" class="form-control" id="a_motivo" name="a_motivo" placeholder="<?php echo $a_motivo; ?>">
+                                                    <input readonly type="text" class="form-control" id="a_motivo" name="a_motivo" value="<?php echo $a_motivo; ?>" disabled>
                                                 </div>
-                                                <textarea readonly class="form-control mt-1" id="a_obs" name="a_obs" rows="4" placeholder="<?php echo $a_obs; ?>"></textarea>
+                                                <label>Observações:</label>
+                                                <textarea readonly class="form-control mt-1" id="a_obs" name="a_obs" rows="4" value="<?php echo $a_obs; ?>" disabled></textarea>
+                                                <span><?php echo "Agendamento feito por: ".$a_func; ?></span>
                                             </div>
                                             <div class="modal-footer">
                                                 <a type="button" class="btn btn-danger" data-toggle="modal" data-target="#modalExcluir<?php echo $a_id; ?>">Excluir</a>
@@ -962,6 +986,7 @@
                                 $a_veiculo = $array['a_veiculo'];
                                 $a_motivo = $array['a_motivo'];
                                 $a_obs = $array['a_obs'];
+                                $a_func = $array['a_func'];
                                 $c_nome = $array['c_nome'];
                                 $c_cpf = $array['c_cpf'];
                                 $c_endereco = $array['c_endereco'];
@@ -988,34 +1013,36 @@
                                             </div>
                                             <div class="modal-body">
                                                 <div class="form-group">
-                                                    <input readonly type="text" class="form-control" id="c_nome" name="c_nome" placeholder="<?php echo $c_nome; ?>" required>
+                                                    <input readonly type="text" class="form-control" id="c_nome" name="c_nome" value="<?php echo $c_nome; ?>" disabled>
                                                 </div>
                                                 <div class="form-group">
-                                                    <input readonly type="text" class="form-control" id="c_cpf" name="c_cpf" placeholder="<?php echo $c_cpf; ?>" required>
+                                                    <input readonly type="text" class="form-control" id="c_cpf" name="c_cpf" value="<?php echo $c_cpf; ?>" disabled>
                                                 </div>
                                                 <div class="form-group">
-                                                    <input readonly type="text" class="form-control" id="c_telefone" name="c_telefone" placeholder="<?php echo $c_telefone; ?>">
+                                                    <input readonly type="text" class="form-control" id="c_telefone" name="c_telefone" value="<?php echo $c_telefone; ?>" disabled>
                                                 </div>
                                                 <div class="form-group">
-                                                    <input readonly type="text" class="form-control" id="c_email" name="c_email" placeholder="<?php echo $c_email; ?>">
+                                                    <input readonly type="text" class="form-control" id="c_email" name="c_email" value="<?php echo $c_email; ?>" disabled>
                                                 </div>
                                                 <div class="form-group">
-                                                    <input readonly type="text" class="form-control" id="c_endereco" name="c_endereco" placeholder="<?php echo $c_endereco; ?>">
+                                                    <input readonly type="text" class="form-control" id="c_endereco" name="c_endereco" value="<?php echo $c_endereco; ?> "disabled>
                                                 </div>
                                                 <div class="form-group">
-                                                    <input readonly type="text" class="form-control" id="a_data" name="a_data" placeholder="<?php $dataModal = DateTime::createFromFormat('Y-m-d', $a_data);
-                                                                                                                                            echo $dataModal->format('d/m/Y'); ?>">
+                                                    <input readonly type="text" class="form-control" id="a_data" name="a_data" value="<?php $dataModal = DateTime::createFromFormat('Y-m-d', $a_data);
+                                                                                                                                            echo $dataModal->format('d/m/Y'); ?>" disabled>
                                                 </div>
                                                 <div class="form-group">
-                                                    <input readonly type="text" class="form-control" id="a_hora" name="a_hora" placeholder="<?php echo $a_hora . ":00 horas"; ?>">
+                                                    <input readonly type="text" class="form-control" id="a_hora" name="a_hora" value="<?php echo $a_hora . ":00 horas"; ?>" disabled>
                                                 </div>
                                                 <div class="form-group">
-                                                    <input readonly type="text" class="form-control" id="a_veiculo" name="a_veiculo" placeholder="<?php echo $a_veiculo; ?>">
+                                                    <input readonly type="text" class="form-control" id="a_veiculo" name="a_veiculo" value="<?php echo $a_veiculo; ?>"disabled>
                                                 </div>
                                                 <div class="form-group">
-                                                    <input readonly type="text" class="form-control" id="a_motivo" name="a_motivo" placeholder="<?php echo $a_motivo; ?>">
+                                                    <input readonly type="text" class="form-control" id="a_motivo" name="a_motivo" value="<?php echo $a_motivo; ?>" disabled>
                                                 </div>
-                                                <textarea readonly class="form-control mt-1" id="a_obs" name="a_obs" rows="4" placeholder="<?php echo $a_obs; ?>"></textarea>
+                                                <label>Observações:</label>
+                                                <textarea readonly class="form-control mt-1" id="a_obs" name="a_obs" rows="4" value="<?php echo $a_obs; ?>" disabled></textarea>
+                                                <span><?php echo "Agendamento feito por: ".$a_func; ?></span>
                                             </div>
                                             <div class="modal-footer">
                                                 <a type="button" class="btn btn-danger" data-toggle="modal" data-target="#modalExcluir<?php echo $a_id; ?>">Excluir</a>
@@ -1073,6 +1100,7 @@
                                 $a_veiculo = $array['a_veiculo'];
                                 $a_motivo = $array['a_motivo'];
                                 $a_obs = $array['a_obs'];
+                                $a_func = $array['a_func'];
                                 $c_nome = $array['c_nome'];
                                 $c_cpf = $array['c_cpf'];
                                 $c_endereco = $array['c_endereco'];
@@ -1099,34 +1127,36 @@
                                             </div>
                                             <div class="modal-body">
                                                 <div class="form-group">
-                                                    <input readonly type="text" class="form-control" id="c_nome" name="c_nome" placeholder="<?php echo $c_nome; ?>" required>
+                                                    <input readonly type="text" class="form-control" id="c_nome" name="c_nome" value="<?php echo $c_nome; ?>" disabled>
                                                 </div>
                                                 <div class="form-group">
-                                                    <input readonly type="text" class="form-control" id="c_cpf" name="c_cpf" placeholder="<?php echo $c_cpf; ?>" required>
+                                                    <input readonly type="text" class="form-control" id="c_cpf" name="c_cpf" value="<?php echo $c_cpf; ?>" disabled>
                                                 </div>
                                                 <div class="form-group">
-                                                    <input readonly type="text" class="form-control" id="c_telefone" name="c_telefone" placeholder="<?php echo $c_telefone; ?>">
+                                                    <input readonly type="text" class="form-control" id="c_telefone" name="c_telefone" value="<?php echo $c_telefone; ?>" disabled>
                                                 </div>
                                                 <div class="form-group">
-                                                    <input readonly type="text" class="form-control" id="c_email" name="c_email" placeholder="<?php echo $c_email; ?>">
+                                                    <input readonly type="text" class="form-control" id="c_email" name="c_email" value="<?php echo $c_email; ?>" disabled>
                                                 </div>
                                                 <div class="form-group">
-                                                    <input readonly type="text" class="form-control" id="c_endereco" name="c_endereco" placeholder="<?php echo $c_endereco; ?>">
+                                                    <input readonly type="text" class="form-control" id="c_endereco" name="c_endereco" value="<?php echo $c_endereco; ?> "disabled>
                                                 </div>
                                                 <div class="form-group">
-                                                    <input readonly type="text" class="form-control" id="a_data" name="a_data" placeholder="<?php $dataModal = DateTime::createFromFormat('Y-m-d', $a_data);
-                                                                                                                                            echo $dataModal->format('d/m/Y'); ?>">
+                                                    <input readonly type="text" class="form-control" id="a_data" name="a_data" value="<?php $dataModal = DateTime::createFromFormat('Y-m-d', $a_data);
+                                                                                                                                            echo $dataModal->format('d/m/Y'); ?>" disabled>
                                                 </div>
                                                 <div class="form-group">
-                                                    <input readonly type="text" class="form-control" id="a_hora" name="a_hora" placeholder="<?php echo $a_hora . ":00 horas"; ?>">
+                                                    <input readonly type="text" class="form-control" id="a_hora" name="a_hora" value="<?php echo $a_hora . ":00 horas"; ?>" disabled>
                                                 </div>
                                                 <div class="form-group">
-                                                    <input readonly type="text" class="form-control" id="a_veiculo" name="a_veiculo" placeholder="<?php echo $a_veiculo; ?>">
+                                                    <input readonly type="text" class="form-control" id="a_veiculo" name="a_veiculo" value="<?php echo $a_veiculo; ?>"disabled>
                                                 </div>
                                                 <div class="form-group">
-                                                    <input readonly type="text" class="form-control" id="a_motivo" name="a_motivo" placeholder="<?php echo $a_motivo; ?>">
+                                                    <input readonly type="text" class="form-control" id="a_motivo" name="a_motivo" value="<?php echo $a_motivo; ?>" disabled>
                                                 </div>
-                                                <textarea readonly class="form-control mt-1" id="a_obs" name="a_obs" rows="4" placeholder="<?php echo $a_obs; ?>"></textarea>
+                                                <label>Observações:</label>
+                                                <textarea readonly class="form-control mt-1" id="a_obs" name="a_obs" rows="4" value="<?php echo $a_obs; ?>" disabled></textarea>
+                                                <span><?php echo "Agendamento feito por: ".$a_func; ?></span>
                                             </div>
                                             <div class="modal-footer">
                                                 <a type="button" class="btn btn-danger" data-toggle="modal" data-target="#modalExcluir<?php echo $a_id; ?>">Excluir</a>
