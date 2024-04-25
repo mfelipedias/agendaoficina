@@ -24,6 +24,12 @@
         a:hover {
             text-decoration: none;
         }
+
+        @media only screen and (max-width: 600px) {
+            .titulo {
+                display: none;
+            }
+        }
     </style>
 
 </head>
@@ -71,12 +77,10 @@
     <!-- fim do preloader -->
     <!-- Image and text -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light shadow" style="z-index: 999;">
-        <a class="navbar-brand align-middle">
-            <a class="material-symbols-outlined">
-                select_check_box
-            </a>
-            <span class="" style="color: blue;">&nbsp;Oficina&nbsp;&nbsp;</span>
-        </a>
+    <div class="col-auto titulo align-self-center">
+    <img src="img/logo-agenda-oficina.png" alt="logo" width="50">
+        </a></div>
+
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
